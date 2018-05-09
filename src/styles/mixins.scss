@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+// 浏览器前缀
+@mixin prefix ($property, $value){
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  #{$property}: $value;
+}

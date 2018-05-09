@@ -1,0 +1,7 @@
+/**
+ * Created by Ninghai on 2018/5/4.
+ */
+export default {
+  getChartById: state => id => state.charts[id],
+  getDoneEvents: state => state.events.done.length
+}
