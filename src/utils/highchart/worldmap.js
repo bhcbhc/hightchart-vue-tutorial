@@ -1,8 +1,8 @@
 /**
  * Created by Ninghai on 2018/5/9.
+ * https://github.com/highcharts/highcharts-vue/blob/master/demo/src/js/worldmap.js
  */
 /* eslint-disable */
-/* global Highcharts */
 export default function (Highcharts) {
   Highcharts.maps['myMapName'] = {'title': 'World, Miller projection, medium resolution',
     'version': '1.1.2',

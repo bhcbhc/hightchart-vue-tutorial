@@ -1,13 +1,13 @@
 <template>
     <el-row class="header">
       <el-col :span="4">
-        test content
+        <h1>Vue使用highcharts</h1>
       </el-col>
       <el-col :span="16">
         <router-link v-for="(item, index) in routes" :key="index" :to="item.url"> {{item.name}} </router-link>
       </el-col>
       <el-col :span="4">
-        个人中心 test
+        <span>个人中心</span>
       </el-col>
     </el-row>
 </template>
@@ -18,16 +18,16 @@ export default {
     return {
       routes: [
         {
-          name: 'home',
+          name: 'Home',
           url: '/'
         }, {
           name: 'Map',
           url: '/highmap'
         }, {
-          name: 'stock',
+          name: 'Stock',
           url: '/highstock'
         }, {
-          name: 'login',
+          name: 'Login',
           url: '/login'
         }
       ]
@@ -40,12 +40,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .header {
-    a {
-      font-size: 1.4rem;
-      margin-left: 1rem;
-    }
-  }
-</style>

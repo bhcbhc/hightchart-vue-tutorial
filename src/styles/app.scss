@@ -58,10 +58,35 @@ a {
 */
 
 .header {
-  height: $header-height;
   margin-top: -$header-height;
   background-color: $header-background-color;
   color: $header-font-color;
   display: flex;
   align-items: center;
+  font-size: 1.8rem;
+  >div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-height;
+    &:first-child {
+      border-right: solid .2rem #ffd04b;
+    }
+    &:last-child {
+      border-left: solid .2rem #ffd04b;
+    }
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  a {
+    font-weight: 700;
+    margin-left: 2rem;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+}
+
+.chartContainer {
 }

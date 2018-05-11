@@ -26,11 +26,19 @@ import HighchartsVue from 'highcharts-vue'
 import Highcharts from 'highcharts'
 import stockInit from 'highcharts/modules/stock'
 import mapInit from 'highcharts/modules/map'
-import addWorldMap from './utils/worldmap'
+import exportingInit from 'highcharts/modules/exporting'
+import addWorldMap from './utils/highchart/worldmap'
+// import addTheme from './utils/highchart/theme-dark-unica'
+import theme from './utils/highchart/theme'
+import { chartBasicOptions } from './utils/constant'
 
 stockInit(Highcharts)
 mapInit(Highcharts)
+exportingInit(Highcharts)
 addWorldMap(Highcharts)
+// addTheme(Highcharts)
+Highcharts.setOptions(chartBasicOptions)
+Highcharts.setOptions(theme)
 
 Vue.component(Row.name, Row)
 Vue.component(Col.name, Col)
@@ -49,7 +57,6 @@ Vue.component(DropdownMenu.name, DropdownMenu)
 Vue.component(DropdownItem.name, DropdownItem)
 
 Vue.use(Loading)
-
 Vue.use(HighchartsVue, {tagName: 'chart'})
 
 Vue.config.productionTip = false
